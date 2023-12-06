@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class RatSensors : MonoBehaviour
+public class Enemis_Sensor : MonoBehaviour
 {
 
     private NavMeshAgent agent;
     // Start is called before the first frame update
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponentInParent<NavMeshAgent>();
     }
 
     private void OnTriggerStay(Collider other)
@@ -23,5 +22,4 @@ public class RatSensors : MonoBehaviour
     void Update()
     {
     }
-
 }
