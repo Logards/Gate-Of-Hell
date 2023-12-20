@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 909f89486a0fa54439642ee0b43a2645, type: 3}
       propertyPath: m_Name
-      value: player
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 909f89486a0fa54439642ee0b43a2645, type: 3}
       propertyPath: m_TagString
@@ -91,6 +91,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 909f89486a0fa54439642ee0b43a2645, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4003339377810628982}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 909f89486a0fa54439642ee0b43a2645, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8294953262732995958}
   m_SourcePrefab: {fileID: 100100000, guid: 909f89486a0fa54439642ee0b43a2645, type: 3}
 --- !u!1 &354382630488487889 stripped
 GameObject:
@@ -216,3 +219,15 @@ MonoBehaviour:
   attackDamage: 1
   attackCooldown: 1
   canAttack: 1
+--- !u!114 &8294953262732995958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354382630488487889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa7107d6ef7a248a3648e7d94c6d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

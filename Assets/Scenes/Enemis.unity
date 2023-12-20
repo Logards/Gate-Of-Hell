@@ -501,6 +501,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1415116417 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1126134873470659947, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
+  m_PrefabInstance: {fileID: 2512256434209934672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1449414742
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,8 +850,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1556522000046490578, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
+      propertyPath: m_Drag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556522000046490578, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
       propertyPath: m_Mass
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556522000046490578, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8294953262732995958, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
+      propertyPath: dashTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8294953262732995958, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
+      propertyPath: dashPower
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8294953262732995958, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
+      propertyPath: orientation
+      value: 
+      objectReference: {fileID: 1415116417}
+    - target: {fileID: 8294953262732995958, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
+      propertyPath: dashUpwardForce
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

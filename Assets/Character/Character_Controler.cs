@@ -37,10 +37,16 @@ public class Character_Controler : MonoBehaviour
     {
         damage = computeDamage(damage);
         if (damage <= 0) return;
-        if (currentHealth - damage < 0) { 
+        if (currentHealth - damage <= 0) { 
             currentHealth = 0;
+            this.die();
         }
         currentHealth -= damage;
+    }
+
+    public void die()
+    {
+        Debug.Log(this.gameObject.name + " is dead");
     }
 
     public void Attack(GameObject target)
