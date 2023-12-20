@@ -66,6 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802f1d2de479c2543894158a5d5776c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCooldown: 1
 --- !u!1 &4720097934103058697
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,6 +80,7 @@ GameObject:
   - component: {fileID: 7619529851147482650}
   - component: {fileID: 7688068125825765634}
   - component: {fileID: 8411833101401603736}
+  - component: {fileID: 70258586709773922}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -197,6 +199,23 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &70258586709773922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4720097934103058697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6919ebcc226d0eb45bea30fa0ff7b455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  defenseValue: 0
+  attackDamage: 0
+  attackCooldown: 1
+  canAttack: 1
 --- !u!1 &7375299611777351721
 GameObject:
   m_ObjectHideFlags: 0

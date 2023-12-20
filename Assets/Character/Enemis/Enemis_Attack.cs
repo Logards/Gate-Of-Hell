@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class Enemis_Attack : MonoBehaviour
 {
-    private bool canAttack = true;
     private bool playerInRange = false;
-    public float attackCooldown = 1f;
+    private Character_Controler controller;
     // Start is called before the first frame update
     void Start()
     {
-        
+        controller = GetComponentInParent<Character_Controler>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerInRange && canAttack)
+        if (playerInRange && controller.canAttack)
         {
-            Attack(GameObject.Find("Player"));
+            controller.Attack(GameObject.FindGameObjectWithTag("Player"));
         }
     }
 
@@ -36,19 +35,5 @@ public class Enemis_Attack : MonoBehaviour
         {
             playerInRange = false;
         }
-    }
-
-    IEnumerator AttackCooldown()
-    {
-        canAttack = false;
-        yield return new WaitForSeconds(this.attackCooldown);
-        canAttack = true;
-    }
-
-    void Attack(GameObject target)
-    {
-        Debug.Log("Attack");
-        //target.GetComponent<PlayerController>().takeDamage();
-        StartCoroutine(AttackCooldown());
     }
 }
