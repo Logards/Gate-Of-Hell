@@ -44,7 +44,7 @@ public class Character_Controler : MonoBehaviour
         currentHealth -= damage;
     }
 
-    public void die()
+    public virtual void die()
     {
         Debug.Log(this.gameObject.name + " is dead");
     }

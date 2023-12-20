@@ -333,6 +333,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &966752186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4720097934103058697, guid: 3cbfc8e96e1346f46829ff5dce9d76a8, type: 3}
+  m_PrefabInstance: {fileID: 5008795330073079851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &966752193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966752186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3031e258d6e28479e2d307e6f69009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  defenseValue: 0
+  attackDamage: 1
+  attackCooldown: 1
+  canAttack: 1
 --- !u!1 &1105969518
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,21 +883,21 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8294953262732995958, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
-      propertyPath: dashTime
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8294953262732995958, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
+    - target: {fileID: 2530106759960862081, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
       propertyPath: dashPower
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: 8294953262732995958, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
+    - target: {fileID: 2530106759960862081, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
       propertyPath: orientation
       value: 
       objectReference: {fileID: 1415116417}
-    - target: {fileID: 8294953262732995958, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
-      propertyPath: dashUpwardForce
+    - target: {fileID: 4185404191700235455, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741553775313770452, guid: 8084e519c2026ea4ba70e16ff679dc87, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -897,6 +919,10 @@ PrefabInstance:
     - target: {fileID: 4720097934103058697, guid: 3cbfc8e96e1346f46829ff5dce9d76a8, type: 3}
       propertyPath: m_Name
       value: Rat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720097934103058697, guid: 3cbfc8e96e1346f46829ff5dce9d76a8, type: 3}
+      propertyPath: m_TagString
+      value: Enemis
       objectReference: {fileID: 0}
     - target: {fileID: 5110396616531941974, guid: 3cbfc8e96e1346f46829ff5dce9d76a8, type: 3}
       propertyPath: attackCooldown
@@ -942,10 +968,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 70258586709773922, guid: 3cbfc8e96e1346f46829ff5dce9d76a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4720097934103058697, guid: 3cbfc8e96e1346f46829ff5dce9d76a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 966752193}
   m_SourcePrefab: {fileID: 100100000, guid: 3cbfc8e96e1346f46829ff5dce9d76a8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
