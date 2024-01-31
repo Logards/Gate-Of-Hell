@@ -41,24 +41,22 @@ public class DungeonGenerator : MonoBehaviour
     public Rule[] Cells;
     public Vector2 offset;
 
-    List<Cell> board;
+    public List<Cell> board;
 
-    // Start is called before the first frame update
-    void Start()
+    public void GenMap()
     {
         float coXboss = 0f;
         float coYboss = 0f;
         // MazeGenerator(startPos);
         // coXboss = GenerateDungeon();
 
-        for (int i = 0; i <nb_monde; i++)
+        for (int i = 0; i < nb_monde; i++)
         {
             MazeGenerator(startPos);
-            (coXboss,coYboss )= GenerateDungeon(i,coXboss,coYboss);
+            (coXboss, coYboss) = GenerateDungeon(i, coXboss, coYboss);
             // int coXbossInt = (int)coXboss;
             // startPos = coXbossInt;
         }
-
     }
 
     private (float,float) GenerateDungeon(int itteration,float bossX , float bossY)
