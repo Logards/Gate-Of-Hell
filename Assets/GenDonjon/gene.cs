@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -282,21 +283,21 @@ public class DungeonGenerator : MonoBehaviour
             {
                 return (0, 90);
             }
-            else if (Salle.ouverture[0] == true && Salle.ouverture[2]) // L de haut a droite
-            {
-                return (3, 0);
-            }
-            else if (Salle.ouverture[0] == true && Salle.ouverture[3]) // L de haut a gauche
-            {
-                return (3, 270);
-            }
-            else if (Salle.ouverture[1] == true && Salle.ouverture[2]) // L de bas a droite
+            else if (Salle.ouverture[0] == true && Salle.ouverture[2]) // L de haut a droite ok 
             {
                 return (3, 90);
             }
-            else if (Salle.ouverture[1] == true && Salle.ouverture[3]) // L de bas a gauche
+            else if (Salle.ouverture[0] == true && Salle.ouverture[3]) // L de haut a gauche
+            {
+                return (3, 0);
+            }
+            else if (Salle.ouverture[1] == true && Salle.ouverture[2]) // L de bas a droite
             {
                 return (3, 180);
+            }
+            else if (Salle.ouverture[1] == true && Salle.ouverture[3]) // L de bas a gauche
+            {
+                return (3, 270);
             }
         }else if (nbouv == 3)
         {
