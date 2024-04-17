@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     private Character_Controler controller;
     private Rigidbody rb;
 
-    public bool canAttack { get; set; }
+    public bool canAttack { get; set; } = true;
     public GameObject target {  get; set; }
 
     public float dashPower = 16f;
@@ -24,8 +24,6 @@ public class Player : MonoBehaviour
     public float attackDamage = 1f;
 
     public float attackCooldown = 1f;
-
-    public bool canAttack = true;
     
     public float experience = 0f;
     public int level = 1;
@@ -36,6 +34,7 @@ public class Player : MonoBehaviour
 
         controller = GetComponentInParent<Character_Controler>();
         rb = GetComponentInParent<Rigidbody>();
+        currentHealth = maxHealth;
 
     }
 
@@ -46,6 +45,14 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(aAttack());
             
+        }
+
+        if (experience >= experienceToNextLevel)
+        {
+            level++;
+            experience -= experienceToNextLevel;
+            experienceToNextLevel *= 1.5f;
+            NextLevel();
         }
     }
 
@@ -106,23 +113,7 @@ public class Player : MonoBehaviour
     {
         rb.velocity = Vector3.zero;
     }
-    
-    void Start()
-    {
-        currentHealth = maxHealth;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (experience >= experienceToNextLevel)
-        {
-            level++;
-            experience -= experienceToNextLevel;
-            experienceToNextLevel *= 1.5f;
-            NextLevel();
-        }
-    }
 
     float computeDamage(float damage)
     {
