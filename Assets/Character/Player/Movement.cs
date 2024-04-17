@@ -31,16 +31,14 @@ public class Movement : MonoBehaviour
         Debug.DrawRay(transform.position, mousePos - transform.position, Color.blue);
 
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 100)) {
-            transform.LookAt(new Vector3(hit.point.x, transform.position.y, hit.point.z));
-        }
+        transform.LookAt(new Vector3(ray.GetPoint(100).x, transform.position.y, ray.GetPoint(100).z-4));
+
 
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         movedirection = new Vector3(horizontalInput, 0, verticalInput);
         transform.Translate(movedirection * speed * Time.deltaTime);
-        cam.transform.position = new Vector3(transform.position.x, cam.transform.position.y, transform.position.z-4);
+        cam.transform.position = new Vector3(transform.position.x, cam.transform.position.y, transform.position.z);
     }
 }
