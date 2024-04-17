@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Enemis_Controler : Character_Controler
 {
-    public override void die()
+    public override void Die()
     {
         Destroy(gameObject);
     }
