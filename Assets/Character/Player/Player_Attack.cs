@@ -79,7 +79,7 @@ public class Attack : MonoBehaviour
         }
     }
 
-    // ReSharper disable Unity.PerformanceAnalysis
+
     public void Dash()
     {
         Vector3 forceToApply = orientation.forward * dashPower + orientation.up * dashUpwardForce;
