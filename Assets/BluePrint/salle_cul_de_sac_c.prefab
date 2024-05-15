@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 592e068ee8c59a0aa8e43121a5aa0260, type: 2}
     - target: {fileID: -8679921383154817045, guid: d4676cfbfd416cb408fb551742ee570f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -94.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4676cfbfd416cb408fb551742ee570f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4676cfbfd416cb408fb551742ee570f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 120.57042
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4676cfbfd416cb408fb551742ee570f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -390,7 +390,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 654e101e24f601de5a703bae4221349a, type: 2}
     - target: {fileID: 919132149155446097, guid: d4676cfbfd416cb408fb551742ee570f, type: 3}
       propertyPath: m_Name
-      value: salle_cul_de_sac
+      value: salle_cul_de_sac_c
       objectReference: {fileID: 0}
     - target: {fileID: 941734124403225890, guid: d4676cfbfd416cb408fb551742ee570f, type: 3}
       propertyPath: m_Materials.Array.data[0]

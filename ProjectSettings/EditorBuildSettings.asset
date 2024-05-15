@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: bb3659a1224e228a6a6ba327bd1ab5c3
   - enabled: 1
+    path: Assets/Scenes/Souk.unity
+    guid: 2bf5e590c69c4f2449c5279614d94291
+  - enabled: 1
+    path: Assets/Scenes/Enemis.unity
+    guid: 634518b580b039e4d8b85fe79643416d
+  - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:

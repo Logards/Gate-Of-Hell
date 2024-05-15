@@ -41,7 +41,7 @@ public class DungeonGenerator : MonoBehaviour
     public int startPos = 0;
     public Rule[] Cells;
     public Vector2 offset;
-
+    public GameObject Ennemy;
     public List<Cell> board;
 
     public void GenMap()
@@ -85,6 +85,7 @@ public class DungeonGenerator : MonoBehaviour
                             randomCell = k;
                             break;
                         } else if (p == 1)
+                            
                         {
                             availableCells.Add(k);
                         }
@@ -122,14 +123,24 @@ public class DungeonGenerator : MonoBehaviour
                         newCell = Instantiate(Cells[QuelSalle].Cell, new Vector3(coX, 0, coY), Quaternion.identity, transform);
                     }
                     
-                    newCell.transform.rotation = Quaternion.Euler(0,toRotate,0);
+                    // newCell.transform.rotation = Quaternion.Euler(0,toRotate,0);
+                    //newCell.transform.Rotate(0, toRotate, 0, Space.Self);
+                    Quaternion newRotation = Quaternion.AngleAxis(toRotate, Vector3.up);
+                    int rdgen = Random.Range(0, 3);
+                    if (rdgen == 1)
+                    {
+                        
+                        Instantiate( Ennemy, new Vector3(coX,10,coY),new Quaternion());
+                    }
+                    // Appliquer la nouvelle rotation en utilisant la rotation courante comme référence
+                    newCell.transform.rotation = newRotation;
 
                 }
             }
         }
 
-        Destroy(newCell);
-        newCell = Instantiate(Cells[6].Cell, new Vector3(coX, 0, coY), Quaternion.identity, transform);
+        // Destroy(newCell);
+        // newCell = Instantiate(Cells[6].Cell, new Vector3(coX, 0, coY), Quaternion.identity, transform);
         return (coX , coY);
         
     }
